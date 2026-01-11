@@ -13,17 +13,19 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    line-height: 1.6;
-    color: var(--text);
+html {
     scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text);
+    line-height: 1.6;
 }
 
 /* NAVBAR */
 .navbar {
     background: var(--dark);
-    color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -32,21 +34,23 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: auto;
+    padding: 14px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 20px;
 }
 
 .logo {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
     font-size: 20px;
-    font-weight: bold;
 }
 
 nav a {
     color: white;
-    margin-left: 20px;
     text-decoration: none;
+    margin-left: 20px;
     font-size: 14px;
 }
 
@@ -67,43 +71,31 @@ nav a:hover {
 }
 
 .hero p {
-    font-size: 18px;
-    margin: 12px 0 25px;
+    margin: 12px 0 24px;
 }
 
 /* BUTTON */
 .btn {
     background: var(--accent);
-    padding: 14px 28px;
     color: white;
-    text-decoration: none;
-    border-radius: 10px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    border: none;
     font-weight: 600;
-    display: inline-block;
-    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-}
-
-/* SECTIONS */
+/* SECTION */
 .section {
-    padding: 60px 20px;
     max-width: 1100px;
     margin: auto;
+    padding: 60px 20px;
 }
 
 .section h2 {
     text-align: center;
     margin-bottom: 20px;
-}
-
-.section p {
-    text-align: center;
-    max-width: 800px;
-    margin: auto;
 }
 
 .gray {
@@ -114,11 +106,11 @@ nav a:hover {
     text-align: center;
 }
 
-/* GRID */
+/* CARDS */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+    gap: 24px;
     margin-top: 40px;
 }
 
@@ -128,7 +120,7 @@ nav a:hover {
     border-radius: 18px;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
@@ -147,11 +139,11 @@ nav a:hover {
 .route-card {
     background: white;
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 14px;
     border: 1px solid #e5e7eb;
 }
 
-/* BOOKING FORM */
+/* FORM */
 .booking-form {
     max-width: 700px;
     margin: 40px auto 0;
@@ -170,27 +162,25 @@ nav a:hover {
 }
 
 label {
+    font-weight: 600;
     font-size: 14px;
     margin-bottom: 6px;
-    font-weight: 600;
 }
 
 input, select, textarea {
-    padding: 12px;
-    border-radius: 8px;
+    padding: 14px;
+    border-radius: 12px;
     border: 1px solid #d1d5db;
-    font-size: 14px;
+    font-size: 16px;
 }
 
-input:focus, select:focus, textarea:focus {
-    outline: 2px solid var(--primary);
+textarea {
+    min-height: 100px;
 }
 
 .full.btn {
     grid-column: span 2;
-    text-align: center;
-    border: none;
-    cursor: pointer;
+    width: 100%;
 }
 
 /* FOOTER */
@@ -199,10 +189,28 @@ footer {
     color: #d1d5db;
     text-align: center;
     padding: 22px;
-    margin-top: 40px;
 }
 
-/* RESPONSIVE */
+/* FLOATING WA */
+.wa-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    text-decoration: none;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    z-index: 9999;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
