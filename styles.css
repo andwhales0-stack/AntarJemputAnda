@@ -124,10 +124,16 @@ nav a:hover {
 
 .card {
     background: white;
-    padding: 25px;
-    border-radius: 14px;
+    padding: 32px;
+    border-radius: 18px;
     text-align: center;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.18);
 }
 
 /* ROUTES */
