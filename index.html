@@ -11,7 +11,7 @@
 <!-- NAVBAR -->
 <header class="navbar">
     <div class="nav-container">
-        <a href="#top" class="logo">AntarJemputAnda</a>
+        <h1 class="logo">AntarJemputAnda</h1>
         <nav>
             <a href="#tentang">Tentang</a>
             <a href="#armada">Armada</a>
@@ -22,15 +22,15 @@
     </div>
 </header>
 
-<div id="top"></div>
-
 <main>
 
 <!-- HERO -->
 <section class="hero">
     <h1>Transportasi Bandara & Antar Kota</h1>
     <p>Nyaman • Tepat Waktu • Profesional</p>
-    <a href="#booking" class="btn">Booking Sekarang</a>
+    <a href="https://wa.me/628xxxxxxxxx" class="btn">
+        Chat via WhatsApp
+    </a>
 </section>
 
 <!-- TENTANG -->
@@ -38,46 +38,79 @@
     <h2>Tentang Kami</h2>
     <p>
         AntarJemputAnda menyediakan layanan transportasi profesional
-        untuk perjalanan bandara dan antar kota dengan armada nyaman
-        serta pengemudi berpengalaman.
+        untuk perjalanan bandara, stasiun, dan antar kota di wilayah
+        Jabodetabek, Bandung, dan Merak dengan armada nyaman serta
+        pengemudi berpengalaman.
     </p>
 </section>
 
 <!-- ARMADA -->
 <section id="armada" class="section gray">
     <h2>Jenis Layanan & Armada</h2>
+
     <div class="grid">
-        <div class="card"><h3>Regular</h3><p>Calya – Sigra</p></div>
-        <div class="card"><h3>Regular Electric</h3><p>Atto 1</p></div>
-        <div class="card"><h3>Regular Plus</h3><p>Avanza – Xenia</p></div>
-        <div class="card"><h3>Comfort</h3><p>HRV – Fortuner</p></div>
-        <div class="card"><h3>Comfort Electric</h3><p>BYD – Aion</p></div>
+        <div class="card">
+            <h3>Regular</h3>
+            <p>Calya – Sigra</p>
+        </div>
+        <div class="card">
+            <h3>Regular Electric</h3>
+            <p>Atto 1 & sejenis</p>
+        </div>
+        <div class="card">
+            <h3>Regular Plus</h3>
+            <p>Avanza – Xenia</p>
+        </div>
+        <div class="card">
+            <h3>Comfort</h3>
+            <p>HRV – Fortuner</p>
+        </div>
+        <div class="card">
+            <h3>Comfort Electric</h3>
+            <p>BYD M6 – Aion</p>
+        </div>
     </div>
 </section>
 
 <!-- RUTE -->
 <section id="rute" class="section">
     <h2>Rute Populer</h2>
+
     <div class="route-grid">
-        <div class="route-card"><h4>Bandara → Jakarta</h4></div>
-        <div class="route-card"><h4>Jakarta → Bandung</h4></div>
-        <div class="route-card"><h4>Jakarta → Merak</h4></div>
+        <div class="route-card">
+            <h4>Bandara → Jakarta</h4>
+            <p>Regular • Plus • Comfort</p>
+        </div>
+        <div class="route-card">
+            <h4>Jakarta → Bandung</h4>
+            <p>Regular Plus • Comfort</p>
+        </div>
+        <div class="route-card">
+            <h4>Jakarta → Merak</h4>
+            <p>Comfort • Comfort Electric</p>
+        </div>
     </div>
 </section>
 
-<!-- BOOKING -->
+<!-- BOOKING FORM -->
 <section id="booking" class="section gray">
     <h2>Form Booking</h2>
+    <p class="center">Isi data di bawah, kami akan hubungi via WhatsApp</p>
 
     <form class="booking-form">
         <div class="form-group">
             <label>Nama</label>
-            <input type="text" required>
+            <input type="text" placeholder="Nama lengkap" required>
         </div>
 
         <div class="form-group">
             <label>No. WhatsApp</label>
-            <input type="tel" required>
+            <input type="tel" placeholder="08xxxxxxxxxx" required>
+        </div>
+
+        <div class="form-group">
+            <label>Tanggal Jemput</label>
+            <input type="date" required>
         </div>
 
         <div class="form-group">
@@ -118,28 +151,32 @@
             </select>
         </div>
 
-        <div class="form-group full">
-            <label>Alamat Detail Pickup</label>
-            <input type="text" placeholder="Nama jalan / patokan">
+        <div class="form-group">
+            <label>Jenis Armada</label>
+            <select required>
+                <option value="">Pilih Armada</option>
+                <option>Regular</option>
+                <option>Regular Electric</option>
+                <option>Regular Plus</option>
+                <option>Comfort</option>
+                <option>Comfort Electric</option>
+            </select>
         </div>
 
-        <!-- GOOGLE MAPS PICKUP -->
         <div class="form-group full">
-            <label>Peta Lokasi Jemput</label>
-            <iframe
-                src="https://maps.google.com/maps?q=Jakarta&t=&z=11&ie=UTF8&iwloc=&output=embed"
-                loading="lazy">
-            </iframe>
+            <label>Catatan Tambahan</label>
+            <textarea rows="4" placeholder="Contoh: koper 3, jemput subuh"></textarea>
         </div>
 
-        <button class="btn full" type="submit">Kirim Booking</button>
+        <button type="submit" class="btn full">Kirim Booking</button>
     </form>
 </section>
 
 <!-- KONTAK -->
 <section id="kontak" class="section center">
-    <h2>Hubungi Kami</h2>
-    <p>Respon cepat via WhatsApp</p>
+    <h2>Butuh Respon Cepat?</h2>
+    <p>Hubungi kami langsung via WhatsApp</p>
+    <a href="https://wa.me/628xxxxxxxxx" class="btn">Chat via WhatsApp</a>
 </section>
 
 </main>
@@ -147,25 +184,6 @@
 <footer>
     © 2026 AntarJemputAnda
 </footer>
-
-<!-- FLOATING WHATSAPP -->
-<a
-  href="https://wa.me/628xxxxxxxxx"
-  class="wa-float"
-  aria-label="Chat WhatsApp">
-  💬
-</a>
-
-<!-- SMOOTH SCROLL SCRIPT -->
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
-  });
-});
-</script>
 
 </body>
 </html>
